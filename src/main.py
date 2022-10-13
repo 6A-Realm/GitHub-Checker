@@ -19,19 +19,22 @@ with open("repositories.json") as f:
     data = load(f)
 
 def search():
-    for key, value in data.items():
+    for key, value in list(data.items()):
 
         # Fetch repository from GitHub
         try:
             repo = git.get_repo(key)
         except:
-            print(f"{key} does not exist on GitHub. Example name: 6A-Realm/GitHub-Checker")
+            print(f"{key} does not exist on GitHub and will be removed. Example name: 6A-Realm/GitHub-Checker")
+            del data[key]
+            continue
 
         # Check latest release if any
         try:
             tag = repo.get_latest_release().tag_name
         except:
-            print(f"No releases found for {repo.full_name}")
+            print(f"{repo.full_name} does not have any releases and will be removed.")
+            del data[key]
             continue
 
         # Check if last tag name is most currently documented
