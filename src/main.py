@@ -1,22 +1,17 @@
-
+from os import environ
 from github import Github
 from json import load, dumps
 from requests import post
-from time import sleep
 
 
-# Opening JSON file and return as dictionary
+# Load env variables
+git = environ["GIT_AUTH"]
+webhook = environ["WEBHOOK"]
+
+
+# Opening settings file
 with open("settings.json") as f:
-    initial = load(f)
-
-    # Access GitHub API using access token
-    git = Github(initial["settings"]["GIT_AUTH"])
-    f.close
-
-
-def search():
-    f2 = open("settings.json")
-    data = load(f2)
+    data = load(f)
 
     for key in data["repositories"].copy():
 
@@ -58,17 +53,9 @@ def search():
             }
 
             # Send to Discord
-            post(data["settings"]["WEBHOOK"], json = discord)
+            post(webhook, json = discord)
 
 
     # Write to file
     with open("settings.json", "w") as outfile:
         outfile.write(dumps(data, indent = 4, default = str))
-
-# Start code
-if __name__ == "__main__":
-    while True:
-        search()
-
-        # Loop every 30 mins
-        sleep(5)
