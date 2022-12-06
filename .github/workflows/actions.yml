@@ -24,7 +24,8 @@ jobs:
 
       - name: execute py script
         env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+          GIT_AUTH: ${{ secrets.GIT_AUTH }}
+          WEBHOOK: ${{ secrets.WEBHOOK }}
         run: python src/main.py
 
       - name: commit files
