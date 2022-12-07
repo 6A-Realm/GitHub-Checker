@@ -56,6 +56,6 @@ with open("settings.json") as f:
             post(webhook, json = discord)
 
 
-    # Write to file
-    with open("settings.json", "w") as outfile:
-        outfile.write(dumps(data, indent = 4, default = str))
+# Write to file
+with open("settings.json", "w") as outfile:
+    outfile.write(dumps(data, indent = 4, default = str))
