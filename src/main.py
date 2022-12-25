@@ -5,9 +5,12 @@ from requests import post
 
 
 # Load env variables
-git = environ["GIT_AUTH"]
+git_token = environ["GIT_AUTH"]
 webhook = environ["WEBHOOK"]
 
+
+# Connect to API
+git = Github(git_token)
 
 # Opening settings file
 with open("settings.json") as f:
