@@ -1,24 +1,3 @@
 {
-    "repositories": {
-        "Atmosphere-NX/Atmosphere": "2023-03-14 00:17:50",
-        "CTCaer/hekate": "2023-02-22 23:25:19",
-        "HamletDuFromage/aio-switch-updater": "2022-12-05 01:40:05",
-        "Team-Neptune/DeepSea-Assets": "2023-02-25 22:57:13",
-        "WerWolv/EdiZon": "2020-06-08 20:25:56",
-        "WerWolv/Tesla-Menu": "2023-03-16 21:06:01",
-        "WerWolv/nx-ovlloader": "2020-05-05 20:24:01",
-        "WerWolv/ovl-sysmodules": "2023-03-16 21:06:52",
-        "cathery/sys-con": "2021-09-23 16:56:06",
-        "cathery/sys-ftpd-light": "2020-07-21 09:44:29",
-        "fortheusers/hb-appstore": "2023-03-23 15:19:49",
-        "joel16/NX-Shell": "2022-08-07 18:25:46",
-        "masagrator/Status-Monitor-Overlay": "2023-04-01 04:51:27",
-        "melonDS-emu/melonDS": "2022-11-03 19:35:21",
-        "mgba-emu/mgba": "2023-01-11 03:51:20",
-        "ndeadly/MissionControl": "2023-02-23 21:12:32",
-        "olliz0r/sys-botbase": "2023-04-02 21:06:10",
-        "retronx-team/sys-clk": "2022-03-24 00:26:14",
-        "spacemeowx2/ldn_mitm": "2023-03-16 14:15:33",
-        "zaksabeast/CaptureSight": "2023-03-11 14:54:21"
-    }
+    "repositories": {}
 }
